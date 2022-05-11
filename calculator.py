@@ -10,19 +10,36 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 while True:
     user_input = input("Enter a calculation: ")
     tokenize_input = user_input.split(" ")
+   
+    if tokenize_input[0] == 'q':
+        break
+    
     operation = tokenize_input[0]
     num1 = int(tokenize_input[1])
     num2 = int(tokenize_input[2])
-    if operation == 'q':
-        break
-    else:
+    
         # first item = add
-        if operation == '+':
+    if operation == '+':
             # call the addition function with other 2 args
-            print(add(num1,num2))
-        elif operation == '-':
+        print(add(num1,num2))
+    elif operation == '-':
             # call the substraction function with other 2 args   
-            print(subtract(num1, num2))
-        elif operation == '*':
+        print(subtract(num1, num2))
+    elif operation == '*':
             # call the multiplication function with other 2 args
-            print(multiply(num1, num2)) 
+        print(multiply(num1, num2))
+    elif operation == '/':
+            # call the divide function with other 2 args
+        print(divide(num1, num2))      
+    elif operation == 'square':
+            # call the square function with other 2 args
+        print(square(num1, num2)) 
+    elif operation == 'cube':
+            # call the cube function with other 2 args
+        print(cube(num1, num2))
+    elif operation == 'pow':
+            # call the power function with other 2 args
+        print(power(num1, num2))
+    elif operation == 'mod':
+            # call the modulus function with other 2 args
+        print(mod(num1, num2))               
