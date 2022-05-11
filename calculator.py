@@ -13,11 +13,13 @@ while True:
    
     if tokenize_input[0] == 'q':
         break
-    
-    operation = tokenize_input[0]
-    num1 = int(tokenize_input[1])
-    num2 = int(tokenize_input[2])
-    
+    try:
+        operation = tokenize_input[0]
+        num1 = float(tokenize_input[1])
+        num2 = float(tokenize_input[2])
+    except:
+        print("Enter valid input.")
+        continue
         # first item = add
     if operation == '+':
             # call the addition function with other 2 args
